@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
