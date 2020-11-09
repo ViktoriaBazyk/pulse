@@ -1,10 +1,25 @@
+@media (max-width: 1200px){
+    .container {
+        width: 900px;
+    }
+}
 @media (max-width: 991px) {
     .container {
-        width: 720px;
+        width: 700px;
     }
     .advantage {
         &__item {
             width: 210px;
+        }
+    }
+    .title {
+        &_left {
+            font-size: 30px;
+        }
+    }
+    .consultation {
+        &__descr {
+            font-size: 18px;
         }
     }
 }
@@ -50,6 +65,10 @@
     }
     .title {
         font-size: 27px;
+        &_left {
+            text-align: center;
+            font-size: 24px;
+        }
     }
     .advantage {
         &__wrapper {
@@ -70,6 +89,17 @@
             width: 340px;
             font-size: 15px;
         }
+    }
+    .consultation {
+        padding: 80px 0 80px 0;
+        &__descr {
+            margin-top: 60px;
+            text-align: center;
+        }
+    }
+    .feed-form {
+        margin: 36px auto;
+        width: 280px;
     }
 }
 
@@ -97,6 +127,10 @@
         &_main {
             width: 200px;
             font-size: 13px;
+        }
+        &_submit {
+            width: 240px;
+            font-size: 15px;
         }
     }
     .promo {
@@ -146,5 +180,14 @@
             width: 230px;
             font-size: 14px;
         }
+    }
+    .consultation {
+        padding: 80px 0 60px 0;
+        &__descr {
+            font-size: 16px;
+        }
+    }
+    .feed-form {
+        width: 240px;
     }
 }
