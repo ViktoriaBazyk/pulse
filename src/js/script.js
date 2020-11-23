@@ -1,17 +1,29 @@
 $(document).ready(function(){
-    $('.carousel__inner').slick({
-        speed: 1200,
-        adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow_left.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow_right.png"></button>',
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
+    $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            nav: true,
+            dots: false,
+            autoHeight: false,
+            navText: ['<img src="../icons/arrow_left.png" alt="left">', '<img src="../icons/arrow_right.png" alt="right">'],
+            responsive: {
+                0: {
+                    items: 1,
                     dots: true,
-                    arrows: false
+                    nav: false
+                },
+                768: {
+                    items: 1,
+                    dots: true,
+                    nav: false
+                },
+                992: {
+                    items: 1
+                },
+                1200: {
+                    items: 1,
+                    nav: true
                 }
             }
-        ]
-      });
+        });
   });
