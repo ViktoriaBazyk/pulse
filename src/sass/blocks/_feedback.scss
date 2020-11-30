@@ -1,0 +1,42 @@
+.feedback {
+    padding-bottom: 71px;
+    &__item {
+        margin: 70px 0 100px 0;
+        display: flex;
+        align-items: flex-start;
+        &:nth-child(4) {
+            margin-bottom: 0;
+        }
+        &__img {
+            width: 169px;
+            height: 169px;
+        }
+        img {
+            margin-right: 62px;
+        }
+    }
+    &__text {
+        width: 656px;
+    }
+    &__name {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        color: #646464;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+        margin-bottom: 19px;
+    }
+    &__descr {
+        color: #0d0d0d;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
+        text-align: left;
+    }
+}

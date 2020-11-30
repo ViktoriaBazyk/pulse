@@ -2,6 +2,12 @@
     .container {
         width: 900px;
     }
+    .catalog-item {
+        width: 280px;
+    }
+    .feedback__text {
+        width: 600px;
+    }
 }
 @media (max-width: 991px) {
     .container {
@@ -29,6 +35,42 @@
             img {
                 width: 100%;
             }
+        }
+    }
+    .catalog {
+        padding-bottom: 70px;
+        &__tab {
+            width: 200px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        &__content {
+            padding: 0 30px;
+        }
+        &-item {
+            width: 300px;
+            margin-bottom: 25px;
+        }
+    }
+    .feedback {
+        &__text {
+            width: 450px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        &__descr {
+            font-size: 14px;
+        }
+        &__img {
+            width: 130px;
+            height: 130px;
+        }
+        img {
+            margin-right: 55px;
         }
     }
 }
@@ -117,6 +159,44 @@
             img {
                 width: 100%;
             }
+        }
+    }
+    .catalog {
+        &__tabs {
+            margin-top: 60px;
+        }
+        &__tab {
+            width: 160px;
+            height: 45px;
+            line-height: 43px;
+            margin: 0 5px;
+            font-size: 14px;
+        }
+        &__content {
+            justify-content: center;
+            margin-top: 50px;
+        }
+        &-item {
+            width: 330px;
+        }
+    }
+    .feedback {
+        &__text {
+            width: 300px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+        &__descr {
+            font-size: 13px;
+        }
+        &__img {
+            width: 130px;
+            height: 130px;
+        }
+        img {
+            margin-right: 50px;
+            margin-left: 25px;
         }
     }
 }
@@ -220,6 +300,62 @@
             img {
                 width: 100%;
             }
+        }
+    }
+    .catalog {
+        &__tab {
+            width: 100px;
+            height: 35px;
+            line-height: 33px;
+            font-size: 9px;
+        }
+        &-item {
+            hr {
+                margin-top: 0;
+            }
+            &__content {
+                padding: 0 16px;
+                a {
+                    margin-bottom: 30px;
+                }
+            }
+            &__list {
+                li {
+                    font-size: 12px;
+                }
+                a {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .feedback {
+        &__item {
+            margin-bottom: 70px;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__text {
+            width: 250px;
+        }
+        &__name {
+            margin-top: 15px;
+            text-align: center;
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__descr {
+            text-align: center;
+            line-height: 18px;
+        }
+        &__img {
+            width: 130px;
+            height: 130px;
+        }
+        img {
+            margin-right: 30px;
+            margin-left: 25px;
         }
     }
 }
