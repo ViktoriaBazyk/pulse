@@ -28,6 +28,7 @@
         font-weight: 700;
         text-align: center;
         &:hover {
+            font-size: 25px;
             color: #fff;
         }
     }
@@ -37,9 +38,15 @@
         align-items: center;
         width: 50px;
         height: 50px;
-        border: 2px solid #ffffff;
+        border: 3px solid #ffffff;
         border-radius: 100%;
         margin: 0 15px;
+        cursor: pointer;
+        transition: 0.5s all;
+        &:hover {
+            border: none;
+            background-color: rgba($color: #c0b5b5, $alpha: 0.8);
+        }
         img {
             height: 27px;
         }
@@ -48,5 +55,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .img-svg {
+        height: 27px;
+    }
+    .img-svg path {
+        color: #fff;
+        &:hover {
+            fill: $main-color;
+        }
     }
 }

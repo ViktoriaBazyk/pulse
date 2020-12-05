@@ -46,4 +46,58 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    $('img.img-svg').each(function(){
+        var $img = $(this);
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+        $.get(imgURL, function(data) {
+          var $svg = $(data).find('svg');
+          if(typeof imgClass !== 'undefined') {
+            $svg = $svg.attr('class', imgClass+' replaced-svg');
+          }
+          $svg = $svg.removeAttr('xmlns:a');
+          if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+            $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+          }
+          $img.replaceWith($svg);
+        }, 'xml');
+    }); 
+    
+    // Modal 
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
+
+    $('#consultation-form').validate();
+    $('#consultation form').validate({
+        rules: {
+            name: "required",
+            phone: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            name: "Пожалуйста, введите свое имя",
+            email: {
+              required: "Пожалуйста, введите свой email",
+              email: " name@domain.com"
+            }
+        }
+    });
+    $('#order form').validate();
+
 });
