@@ -79,25 +79,30 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         });
     });
+    
 
-    $('#consultation-form').validate();
-    $('#consultation form').validate({
-        rules: {
-            name: "required",
-            phone: "required",
-            email: {
-                required: true,
-                email: true
+    function valideForms (form){
+        $(form).validate({
+            rules: {
+                name: "required",
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: "Пожалуйста, введите свое имя",
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                  required: "Пожалуйста, введите свой почту",
+                  email: "Неправильно введен адрес почты"
+                }
             }
-        },
-        messages: {
-            name: "Пожалуйста, введите свое имя",
-            email: {
-              required: "Пожалуйста, введите свой email",
-              email: " name@domain.com"
-            }
-        }
-    });
-    $('#order form').validate();
+        }); 
+    };
 
+    valideForms('#consultation-form');
+    valideForms('#consultation form');
+    valideForms('#order form');
 });
