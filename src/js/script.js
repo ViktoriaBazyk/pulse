@@ -120,6 +120,6 @@ $(document).ready(function(){
             $('.overlay, #thanks').fadeIn('slow');
             $('form').trigger('reset');
         });
-        return false;
+        return false; 
     });
 });
